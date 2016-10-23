@@ -98,7 +98,7 @@ class PermittedParams < Struct.new(:params, :controller)
   end
 end
 
-class ActionController::Base
+class ActionController::Metal
 protected
   def permitted_params
     PermittedParams.new(params, self)
